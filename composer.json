@@ -16,18 +16,13 @@
   "support": {
     "issues": "https://github.com/dimitriBouteille/wp-framework/issues"
   },
-  "config": {
-    "platform": {
-      "php": "7.4"
-    }
-  },
-  "minimum-stability": "dev",
   "autoload": {
     "psr-4": {
       "Dbout\\Wp\\Framework\\": "src/"
     }
   },
   "require": {
+    "php": ">=7.4|8.*",
     "dbout/wp-hooks": "dev-master",
     "dbout/wp-assets": "dev-master",
     "symfony/http-foundation": "^v5",
