@@ -32,6 +32,8 @@
     "dbout/wp-assets": "dev-master",
     "symfony/http-foundation": "^v5",
     "symfony/routing": "^v5",
-    "monolog/monolog": "^2"
+    "monolog/monolog": "^2",
+    "symfony/mime": "^5",
+    "nesbot/carbon": "^2"
   }
 }

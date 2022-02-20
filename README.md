@@ -22,6 +22,15 @@ composer require dbout/wp-framework
 ## Components
 
 - [Form](doc/components/form.md)
+- [Logger](doc/components/logger.md)
 - [Notice](doc/components/notice.md)
 - [PostType](doc/components/postype.md)
+- [Provider](doc/components/provider.md)
 - [Router & Controller](doc/components/router-controller.md)
+
+## Helpers
+
+- [File](src/Helper/File.php)
+- [Format](src/Helper/Format.php)
+- [Url](src/Helper/Url.php)
+- [UploadDir](src/Helper/UploadDir.php)
