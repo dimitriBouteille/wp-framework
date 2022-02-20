@@ -37,3 +37,11 @@ composer require dbout/wp-framework
 - [Format](src/Helper/Format.php)
 - [Url](src/Helper/Url.php)
 - [UploadDir](src/Helper/UploadDir.php)
+
+## MU Plugins
+
+- Clean head
+- Disable comment
+- Disable Rest API
+- Remove emoji support
+- Remove generator metas

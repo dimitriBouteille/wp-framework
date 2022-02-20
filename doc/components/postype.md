@@ -1,6 +1,6 @@
 # PostType
 
-To learn more about the arguments, please see the Worpdress documentation: [Doc](https://codex.wordpress.org/Function_Reference/register_post_type).
+To learn more about the arguments, please see the Wordpress documentation: [register_post_type function](https://codex.wordpress.org/Function_Reference/register_post_type).
 
 ```php
 add_action('init', function() {

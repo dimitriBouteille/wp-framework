@@ -29,6 +29,8 @@
     "symfony/routing": "^v5",
     "monolog/monolog": "^2",
     "symfony/mime": "^5",
-    "nesbot/carbon": "^2"
+    "nesbot/carbon": "^2",
+    "symfony/validator": "^v5",
+    "symfony/property-access": "^v5"
   }
 }
