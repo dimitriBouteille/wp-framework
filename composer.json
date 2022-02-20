@@ -1,0 +1,39 @@
+{
+  "name": "dbout/wp-framework",
+  "description": "Wordpress library that contains several classes to simplify development on Worpdress.",
+  "type": "package",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Dimitri BOUTEILLE",
+      "email": "bonjour@dimitri-bouteille.fr",
+      "homepage": "https://github.com/dimitriBouteille",
+      "role": "Developer"
+    }
+  ],
+  "keywords": ["wordpress", "wp", "form", "comment", "login", "user", "page", "postType", "twig", "validator", "notice", "helpers"],
+  "homepage": "https://github.com/dimitriBouteille/wp-framework/",
+  "support": {
+    "issues": "https://github.com/dimitriBouteille/wp-framework/issues"
+  },
+  "config": {
+    "platform": {
+      "php": "7.4"
+    }
+  },
+  "minimum-stability": "dev",
+  "autoload": {
+    "psr-4": {
+      "Dbout\\Wp\\Framework\\": "src/"
+    }
+  },
+  "require": {
+    "dbout/wp-hooks": "dev-master",
+    "dbout/wp-assets": "dev-master",
+    "symfony/http-foundation": "^v5",
+    "symfony/routing": "^v5",
+    "monolog/monolog": "^2",
+    "symfony/mime": "^5",
+    "nesbot/carbon": "^2"
+  }
+}
