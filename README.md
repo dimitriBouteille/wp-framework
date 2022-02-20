@@ -2,6 +2,8 @@
 
 Wordpress library that contains several classes to simplify development on Worpdress. Part of the library is based on Symfony.
 
+[![Latest Stable Version](https://img.shields.io/packagist/v/dbout/wp-framework?style=flat-square)](https://packagist.org/packages/dbout/wp-framework)
+
 ## Requirements
 
 The server requirements are basically the same as for WordPress with the addition of a few ones :
@@ -24,6 +26,7 @@ composer require dbout/wp-framework
 - [Form](doc/components/form.md)
 - [Logger](doc/components/logger.md)
 - [Notice](doc/components/notice.md)
+- [Page](doc/components/page.md)
 - [PostType](doc/components/postype.md)
 - [Provider](doc/components/provider.md)
 - [Router & Controller](doc/components/router-controller.md)
