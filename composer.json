@@ -30,6 +30,7 @@
   "require": {
     "dbout/wp-hooks": "dev-master",
     "dbout/wp-assets": "dev-master",
-    "symfony/http-foundation": "^v5.2"
+    "symfony/http-foundation": "^v5",
+    "symfony/routing": "^v5"
   }
 }

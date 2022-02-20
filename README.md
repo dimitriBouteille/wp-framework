@@ -1,6 +1,6 @@
 # Wordpress Framework
 
-Wordpress library that contains several classes to simplify development on Worpdress.
+Wordpress library that contains several classes to simplify development on Worpdress. Part of the library is based on Symfony.
 
 ## Requirements
 
@@ -23,3 +23,5 @@ composer require dbout/wp-framework
 
 - [Form](doc/components/form.md)
 - [Notice](doc/components/notice.md)
+- [PostType](doc/components/postype.md)
+- [Router & Controller](doc/components/router-controller.md)

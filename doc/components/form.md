@@ -2,6 +2,7 @@
 
 Here is an example to add a form on the front
 
+####  Create form class 
 ```php
 use \Symfony\Component\HttpFoundation\Request;
 use \Dbout\Wp\Framework\Form\AbstractForm;
@@ -19,3 +20,6 @@ class ContactForm extends AbstractForm {
     }
 }
 ```
+
+#### Register the form
+
