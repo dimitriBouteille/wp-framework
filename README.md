@@ -1,6 +1,6 @@
 # Wordpress Framework
 
-Wordpress library that contains several classes to simplify development on Worpdress. Part of the library is based on Symfony.
+Wordpress library that contains several classes (components, helpers and mu-plugins) to simplify development on Worpdress. Part of the library is based on Symfony.
 
 [![Latest Stable Version](https://img.shields.io/packagist/v/dbout/wp-framework?style=flat-square)](https://packagist.org/packages/dbout/wp-framework)
 
@@ -30,6 +30,7 @@ composer require dbout/wp-framework
 - [PostType](doc/components/postype.md)
 - [Provider](doc/components/provider.md)
 - [Router & Controller](doc/components/router-controller.md)
+- [Validator](doc/components/validator.md)
 
 ## Helpers
 
@@ -37,3 +38,11 @@ composer require dbout/wp-framework
 - [Format](src/Helper/Format.php)
 - [Url](src/Helper/Url.php)
 - [UploadDir](src/Helper/UploadDir.php)
+
+## MU Plugins
+
+- Clean head
+- Disable comment
+- Disable Rest API
+- Remove emoji support
+- Remove generator metas
