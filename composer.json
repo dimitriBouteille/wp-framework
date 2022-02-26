@@ -32,5 +32,6 @@
     "nesbot/carbon": "^2",
     "symfony/validator": "^v5",
     "symfony/property-access": "^v5"
-  }
+  },
+  "minimum-stability": "dev"
 }
