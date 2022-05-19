@@ -127,7 +127,7 @@ abstract class Validator
 
         $this->buildsErrors();
         $this->hydrateObject();
-        return $this->hasErrors();
+        return !$this->hasErrors();
     }
 
     /**

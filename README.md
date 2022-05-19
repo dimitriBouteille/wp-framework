@@ -23,6 +23,7 @@ composer require dbout/wp-framework
 
 ## Components
 
+- API
 - [Form](doc/components/form.md)
 - [Logger](doc/components/logger.md)
 - [Notice](doc/components/notice.md)
