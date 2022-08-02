@@ -1,10 +1,10 @@
 <?php
 
-namespace Dbout\Wp\Framework\Api\Exceptions;
+namespace Dbout\Wp\Framework\Api\Exception;
 
 /**
  * Class RouteNotImplementedException
- * @package Dbout\Wp\Framework\Api\Exceptions
+ * @package App\Api\Exceptions
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
@@ -13,14 +13,19 @@ class RouteNotImplementedException extends RouteException
 {
 
     /**
+     * @var string
+     */
+    protected string $errorCode = 'route-not-implemented';
+
+    /**
      * @param array $additionalData
      */
     public function __construct(array $additionalData = [])
     {
         parent::__construct(
-            'app_rest_invalid_endpoint',
-            'Method not implemented',
-            404,
+            $this->errorCode,
+            'Route not implemented.',
+            500,
             $additionalData
         );
     }
