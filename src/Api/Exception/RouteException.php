@@ -42,7 +42,7 @@ class RouteException extends \Exception
 
         // Auto format Error based on classname
         if (!$errorCode) {
-            $path = explode('\\', __CLASS__);
+            $path = explode('\\', get_called_class() ?? __CLASS__);
             $errorCode = strtolower(preg_replace('/(?<!^)[A-Z]/', '-$0', array_pop($path)));
         }
 
