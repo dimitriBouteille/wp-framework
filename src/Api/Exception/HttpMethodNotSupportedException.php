@@ -3,13 +3,13 @@
 namespace Dbout\Wp\Framework\Api\Exception;
 
 /**
- * Class RouteNotImplementedException
- * @package App\Api\Exceptions
+ * Class HttpMethodNotSupportedException
+ * @package Dbout\Wp\Framework\Api\Exception
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
  */
-class RouteNotImplemented extends RouteException
+class HttpMethodNotSupportedException extends RouteException
 {
 
     /**
@@ -18,7 +18,7 @@ class RouteNotImplemented extends RouteException
     public function __construct(array $additionalData = [])
     {
         parent::__construct(
-            'Route not implemented.',
+            'Http method not supported.',
             500,
             $additionalData
         );

@@ -7,9 +7,9 @@ use Dbout\Wp\Framework\Api\Action\HttpGetRouteInterface;
 use Dbout\Wp\Framework\Api\Action\HttpPatchRouteInterface;
 use Dbout\Wp\Framework\Api\Action\HttpPostRouteInterface;
 use Dbout\Wp\Framework\Api\Action\HttpPutRouteInterface;
-use Dbout\Wp\Framework\Api\Exception\HttpMethodNotSupported;
+use Dbout\Wp\Framework\Api\Exception\HttpMethodNotSupportedException;
 use Dbout\Wp\Framework\Api\Exception\RouteException;
-use Dbout\Wp\Framework\Api\Exception\RouteNotImplemented;
+use Dbout\Wp\Framework\Api\Exception\RouteNotImplementedException;
 use App\Api\Helpers\Route;
 
 /**
@@ -122,11 +122,11 @@ abstract class AbstractRoute implements InterfaceRoute
         try {
             $methodInterface = self::MAPPING_METHODS[$request->get_method()] ?? null;
             if (!$methodInterface) {
-                throw new RouteNotImplemented();
+                throw new RouteNotImplementedException();
             }
 
             if (!$this instanceof $methodInterface) {
-                throw new HttpMethodNotSupported();
+                throw new HttpMethodNotSupportedException();
             }
 
             $response = $this->execute($request);

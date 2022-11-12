@@ -3,18 +3,15 @@
 namespace Dbout\Wp\Framework\Api\Exception;
 
 /**
- * Class NotFound
+ * Class NotFoundException
  * @package Dbout\Wp\Framework\Api\Exception
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
  */
-class NotFound extends RouteException
+class NotFoundException extends RouteException
 {
 
-    /**
-     * @var bool
-     */
     protected bool $visibleFront = true;
 
     /**
