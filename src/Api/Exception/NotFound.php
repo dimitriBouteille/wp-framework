@@ -3,13 +3,13 @@
 namespace Dbout\Wp\Framework\Api\Exception;
 
 /**
- * Class NotFoundException
+ * Class NotFound
  * @package Dbout\Wp\Framework\Api\Exception
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
  */
-class NotFoundException extends RouteException
+class NotFound extends RouteException
 {
 
     /**
@@ -36,7 +36,6 @@ class NotFoundException extends RouteException
         );
 
         parent::__construct(
-            'not-found',
             $message,
             404,
             $additionalData

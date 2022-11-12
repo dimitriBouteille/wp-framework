@@ -9,13 +9,8 @@ namespace Dbout\Wp\Framework\Api\Exception;
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
  */
-class RouteNotImplementedException extends RouteException
+class RouteNotImplemented extends RouteException
 {
-
-    /**
-     * @var string
-     */
-    protected string $errorCode = 'route-not-implemented';
 
     /**
      * @param array $additionalData
@@ -23,7 +18,6 @@ class RouteNotImplementedException extends RouteException
     public function __construct(array $additionalData = [])
     {
         parent::__construct(
-            $this->errorCode,
             'Route not implemented.',
             500,
             $additionalData

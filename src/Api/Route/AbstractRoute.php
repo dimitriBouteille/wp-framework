@@ -9,12 +9,12 @@ use Dbout\Wp\Framework\Api\Action\HttpPostRouteInterface;
 use Dbout\Wp\Framework\Api\Action\HttpPutRouteInterface;
 use Dbout\Wp\Framework\Api\Exception\HttpMethodNotSupported;
 use Dbout\Wp\Framework\Api\Exception\RouteException;
-use Dbout\Wp\Framework\Api\Exception\RouteNotImplementedException;
+use Dbout\Wp\Framework\Api\Exception\RouteNotImplemented;
 use App\Api\Helpers\Route;
 
 /**
  * Class AbstractRoute
- * @package App\Api\Routes
+ * @package Dbout\Wp\Framework\Api\Route
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
@@ -122,7 +122,7 @@ abstract class AbstractRoute implements InterfaceRoute
         try {
             $methodInterface = self::MAPPING_METHODS[$request->get_method()] ?? null;
             if (!$methodInterface) {
-                throw new RouteNotImplementedException();
+                throw new RouteNotImplemented();
             }
 
             if (!$this instanceof $methodInterface) {

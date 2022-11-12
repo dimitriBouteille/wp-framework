@@ -4,7 +4,7 @@ namespace Dbout\Wp\Framework\Api\Exception;
 
 /**
  * Class RouteException
- * @package App\Api\Exceptions
+ * @package Dbout\Wp\Framework\Api\Exception
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
@@ -18,9 +18,9 @@ class RouteException extends \Exception
     protected bool $visibleFront = false;
 
     /**
-     * @var string
+     * @var string|null
      */
-    protected string $errorCode;
+    protected ?string $errorCode;
 
     /**
      * @var array
@@ -28,17 +28,24 @@ class RouteException extends \Exception
     protected array $additionalData = [];
 
     /**
-     * @param string $errorCode
      * @param $message
-     * @param $httpStatusCode
+     * @param int $httpStatusCode
      * @param array $additionalData
+     * @param string|null $errorCode
      */
     public function __construct(
-        string $errorCode,
         $message,
-        $httpStatusCode = 400,
-        array $additionalData = []
+        int $httpStatusCode = 400,
+        array $additionalData = [],
+        string $errorCode = null,
     ) {
+
+        // Auto format Error based on classname
+        if (!$errorCode) {
+            $path = explode('\\', __CLASS__);
+            $errorCode = strtolower(preg_replace('/(?<!^)[A-Z]/', '-$0', array_pop($path)));
+        }
+
         $this->errorCode = $errorCode;
         $this->additionalData = $additionalData;
         parent::__construct(

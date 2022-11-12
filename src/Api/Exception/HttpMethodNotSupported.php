@@ -4,7 +4,7 @@ namespace Dbout\Wp\Framework\Api\Exception;
 
 /**
  * Class HttpMethodNotSupported
- * @package App\Api\Exceptions
+ * @package Dbout\Wp\Framework\Api\Exception
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022
@@ -12,15 +12,12 @@ namespace Dbout\Wp\Framework\Api\Exception;
 class HttpMethodNotSupported extends RouteException
 {
 
-    protected string $errorCode = 'http-method-not-supported';
-
     /**
      * @param array $additionalData
      */
     public function __construct(array $additionalData = [])
     {
         parent::__construct(
-            $this->errorCode,
             'Http method not supported.',
             500,
             $additionalData
