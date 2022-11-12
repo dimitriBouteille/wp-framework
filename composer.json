@@ -23,7 +23,7 @@
   },
   "require": {
     "php": ">=7.4|8.*",
-    "dbout/wp-hooks": "dev-master",
+    "dbout/wp-hooks": "^v1",
     "dbout/wp-assets": "dev-master",
     "symfony/http-foundation": "^v5",
     "symfony/routing": "^v5",

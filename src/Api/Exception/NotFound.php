@@ -25,7 +25,6 @@ class NotFound extends RouteException
         ?string $model = null,
         array $additionalData = []
     ) {
-
         if (!$model) {
             $model = 'Object';
         }
