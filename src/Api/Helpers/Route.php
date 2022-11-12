@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Api\Helpers;
+namespace Dbout\Wp\Framework\Api\Helpers;
 
 /**
  * Class Route
- * @package App\Api\Helpers
+ * @package Dbout\Wp\Framework\Api\Helpers
  *
  * @author Dimitri BOUTEILLE <bonjour@dimitri-bouteille.fr>
  * @copyright Copyright (c) 2022

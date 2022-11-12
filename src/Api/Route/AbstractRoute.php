@@ -10,7 +10,7 @@ use Dbout\Wp\Framework\Api\Action\HttpPutRouteInterface;
 use Dbout\Wp\Framework\Api\Exception\HttpMethodNotSupportedException;
 use Dbout\Wp\Framework\Api\Exception\RouteException;
 use Dbout\Wp\Framework\Api\Exception\RouteNotImplementedException;
-use App\Api\Helpers\Route;
+use Dbout\Wp\Framework\Api\Helpers\Route;
 
 /**
  * Class AbstractRoute
