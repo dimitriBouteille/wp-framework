@@ -37,7 +37,7 @@ class RouteException extends \Exception
         $message,
         int $httpStatusCode = 400,
         array $additionalData = [],
-        string $errorCode = null,
+        string $errorCode = null
     ) {
 
         // Auto format Error based on classname
