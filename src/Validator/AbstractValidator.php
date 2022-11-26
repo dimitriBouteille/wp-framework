@@ -3,6 +3,7 @@
 namespace Dbout\Wp\Framework\Validator;
 
 use Symfony\Component\PropertyAccess\PropertyAccess;
+use Symfony\Component\PropertyAccess\PropertyAccessor;
 use Symfony\Component\Validator\ConstraintViolationList;
 use Symfony\Component\Validator\Validation;
 use Symfony\Component\Validator\Validator\ValidatorInterface;
@@ -33,6 +34,11 @@ abstract class AbstractValidator
     protected ValidatorInterface $validator;
 
     /**
+     * @var PropertyAccessor
+     */
+    protected PropertyAccessor $accessor;
+
+    /**
      * @var ConstraintViolationList[]
      */
     protected array $errors = [];
@@ -48,7 +54,8 @@ abstract class AbstractValidator
     public function __construct(&$object = null)
     {
         $this->object = $object;
-        $this->validator = Validation::createValidator();
+        $this->validator = $this->createValidator();
+        $this->accessor = $this->createPropertyAccess();
     }
 
     /**
@@ -104,11 +111,10 @@ abstract class AbstractValidator
      */
     protected function hydrateObject(): void
     {
-        $accessor = PropertyAccess::createPropertyAccessor();
         foreach ($this->getConstraints() as $fieldName => $constraints) {
             $value = $this->getDataValidate($fieldName);
             try {
-                $accessor->setValue($this->object, $fieldName, $value);
+                $this->accessor->setValue($this->object, $fieldName, $value);
             } catch (\Exception $exception) {
             }
         }
@@ -121,5 +127,24 @@ abstract class AbstractValidator
     protected function getDataValidate(string $key)
     {
         return $this->dataValidate[$key] ?? null;
+    }
+
+    /**
+     * @return ValidatorInterface
+     */
+    protected function createValidator(): ValidatorInterface
+    {
+        return Validation::createValidator();
+    }
+
+    /**
+     * @return PropertyAccessor
+     */
+    protected function createPropertyAccess(): PropertyAccessor
+    {
+        return PropertyAccess::createPropertyAccessorBuilder()
+            ->enableExceptionOnInvalidIndex()
+            ->disableMagicSet()
+            ->getPropertyAccessor();
     }
 }
